@@ -8,13 +8,35 @@ author: CoolV1994
 
 
 # Theme Settings
+theme:
 # theme: light | dark | auto
-theme: dark
+  mode: dark
 # theme-color: HEX_COLOR
-theme-color: 712cf9
+  color: 712cf9
 # theme-rtl: true | false
-theme-rtl: false
+  rtl: false
+# theme-version: 5.3.8
+  version: 5.3.8
+# theme-cdn: CDN_URL
+  cdn: "https://gawdtemplates.github.io/bootstrap-assets/"
+# theme-css: CSS_URL
+  css-url: "https://gawdtemplates.github.io/bootstrap-assets/5.3.8/css/bootstrap.min.css"
+# theme-js: JS_URL
+  js-url: "https://gawdtemplates.github.io/bootstrap-assets/5.3.8/js/bootstrap.min.js"
 
+
+# jQuery Settings
+jquery:
+  version: 3.7.1
+  cdn: "https://code.jquery.com/"
+  url: "https://code.jquery.com/jquery-3.7.1.min.js"
+
+
+# Popper Settings
+popper:
+  version: 2.11.8
+  cdn: "https://unpkg.com/@popperjs/core@2"
+  url: "https://unpkg.com/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 
 # Build Settings
 markdown: kramdown
