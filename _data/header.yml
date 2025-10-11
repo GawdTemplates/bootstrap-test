@@ -1,0 +1,42 @@
+# Site Title / Logo
+brand:
+  name: GawdTech
+  url: /
+  logo: /assets/img/logo.png
+
+
+# Header Navbar
+navbar:
+  Home: /
+  Albums: /albums/
+  Blog:
+    Blog: /blog/
+    Posts: /blog/posts.html
+    Categories: /blog/categories.html
+    Tags: /blog/tags.html
+    Authors: /authors/
+  Projects: /projects/
+  About: /about.html
+  Contact: /contact.html
+  Examples:
+    Products: /examples/products.html
+    Pricing: /examples/pricing.html
+    Cover: /examples/cover.html
+    Starter: /examples/starter-template.html
+    Features: /examples/features.html
+    Carousel: /examples/carousel.html
+    Test:
+      Page 1: /page-1
+      Page 2: /page-2
+      Page 3: /page-3
+
+
+# Header Sub-Navbar
+subnavbar:
+  Products: /products.html
+  Pricing: /pricing.html
+  Cover: /cover.html
+  Starter: /starter-template.html
+  Features: /features.html
+  Carousel: /carousel.html
+  Contact: /contact.html

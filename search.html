@@ -1,0 +1,95 @@
+---
+layout: default
+title: Search
+css:
+  - '/assets/css/contact.css'
+scripts:
+  - '/assets/js/contact.js'
+---
+
+<div class="py-5 text-center">
+	<h1 class="h2">Search</h1>
+	<p class="lead">Advanced Search</p>
+</div>
+
+<div class="row g-5">
+
+	<!-- Start Content -->
+	<div class="col-md-7 col-lg-8">
+		<h4 class="mb-3 text-primary">Search</h4>
+		<form action="search.php" method="post" class="needs-validation" novalidate>
+
+			<div class="col-12">
+				<label for="category" class="form-label">Content Type</label>
+				<div class="btn-toolbar mb-3" role="toolbar">
+					<div class="btn-group me-2" role="group">
+
+						<input type="radio" class="btn-check" name="category" id="category_general" autocomplete="off" checked>
+						<label class="btn btn-outline-secondary" for="category_general">All</label>
+
+						<input type="radio" class="btn-check" name="category" id="category_support" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="category_support">Post</label>
+
+						<input type="radio" class="btn-check" name="category" id="category_business" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="category_business">Page</label>
+
+						<input type="radio" class="btn-check" name="category" id="category_feedback" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="category_feedback">File</label>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<label for="priority" class="form-label">Search Location</label>
+				<div class="btn-toolbar mb-3" role="toolbar">
+					<div class="btn-group me-2" role="group">
+
+						<input type="radio" class="btn-check" name="priority" id="priority_normal" autocomplete="off" checked>
+						<label class="btn btn-outline-secondary" for="priority_normal">All</label>
+
+						<input type="radio" class="btn-check" name="priority" id="priority_low" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="priority_low">Title</label>
+
+						<input type="radio" class="btn-check" name="priority" id="priority_high" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="priority_high">Content</label>
+
+						<input type="radio" class="btn-check" name="priority" id="priority_urgent" autocomplete="off">
+						<label class="btn btn-outline-secondary" for="priority_urgent">Date</label>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row gy-3">
+				<div class="col-12">
+					<label for="query" class="form-label">Search Query</label>
+					<input type="text" class="form-control" id="query" placeholder="" required>
+					<div class="invalid-feedback">
+						Search query required.
+					</div>
+				</div>
+			</div>
+
+			<br>
+			<hr class="my-4">
+			<br>
+
+			<button class="w-100 btn btn-primary btn-lg" type="submit">Search</button>
+
+		</form>
+	</div>
+	<!-- End Content -->
+
+</div>
+
+<div class="row g-5">
+
+	<!-- Start Content -->
+	<div class="col-md-7 col-lg-8">
+		<h4 class="mb-3 text-primary">Search</h4>
+	</div>
+
+	<p>Results</p>
+
+</div>

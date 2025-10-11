@@ -1,0 +1,13 @@
+---
+layout: blog
+title: Featured Posts - Blog
+description: Blog Featured Posts
+posts:
+  template: post_featured
+  category: featured
+  limit: 20
+---
+
+<div id="blog-featured" class="row mb-2">
+{% include posts.html posts=site.blog %}
+</div><!-- /#blog-featured -->

@@ -1,0 +1,37 @@
+---
+layout: blog
+title: News
+description: Recent News and Announcements
+posts:
+  limit: 10
+  skip:
+    - announcement
+    - promotion
+  main:
+    template: post_main
+    category: announcement
+    limit: 1
+  featured:
+    template: post_featured
+    category: promotion
+    limit: 2
+---
+
+{%- assign posts = site.categories['news'] -%}
+
+<div id="blog-main">
+{% include posts.html id='main' posts=posts %}
+</div><!-- /#blog-main -->
+
+<div id="blog-featured" class="row mb-2">
+{% include posts.html id='featured' posts=posts %}
+</div><!-- /#blog-featured -->
+
+<div id="blog-posts" class="col-md-8">
+	<h3 class="pb-4 mb-4 fst-italic border-bottom">Posts</h3>
+{% include posts.html posts=posts %}
+</div><!-- /#blog-posts -->
+
+<div id="blog-meta" class="col-md-8">
+	<p><a href="{{ 'feed.xml' | relative_url }}">RSS Feed</a></p>
+</div><!-- /#blog-meta -->

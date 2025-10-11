@@ -1,0 +1,21 @@
+left:
+    name: About
+    url: /about.html
+
+right:
+    name: Contact
+    url: /contact.html
+
+links:
+  - name: Blog
+    url: /
+  - name: Albums
+    url: /albums/
+  - name: Categories
+    url: /categories.html
+  - name: Tags
+    url: /tags.html
+  - name: Authors
+    url: /authors/
+  - name: Projects
+    url: /projects/

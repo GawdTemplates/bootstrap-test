@@ -1,0 +1,23 @@
+---
+layout: default
+sidebar:
+  left:
+    - doc_toc
+    - post_meta
+  right: []
+---
+
+<div id="page" class="row g-5">
+{%- assign sidebar_left = page.sidebar.left | default: layout.sidebar.left -%}
+{% if sidebar_left.size > 0 %}{% include sidebar.html modules=sidebar_left %}{% endif %}
+
+	<div id="content" class="col-md-8">
+		<article id="{{ page.id | replace: '/', '-' }}" class="document">
+			<h3 class="pb-4 mb-4 fst-italic border-bottom">{{ page.title }}</h3>
+{{ content }}
+		</article>
+	</div>
+
+{%- assign sidebar_right = page.sidebar.right | default: layout.sidebar.right -%}
+{% if sidebar_right.size > 0 %}{% include sidebar.html modules=sidebar_right %}{% endif %}
+</div><!-- /#page -->

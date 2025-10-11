@@ -1,0 +1,76 @@
+---
+layout: default
+title: Test Page
+description: Test Page for Templates
+
+table:
+  head:
+  - '#':
+    - A
+    - B
+    - C
+  data:
+  - '1':
+    - A1
+    - B1
+    - C1
+  - '2':
+    - A2
+    - B2
+    - C2
+  - '3':
+    - A3
+    - B3
+    - C3
+
+---
+
+<H2>Table</H2>
+
+{% assign table = page.table %}
+
+<div class="table-responsive">
+  <table class="table text-center">
+
+  {% if table.head.size > 0 %}
+    <thead>
+    {% for entry in table.head %}
+      {% for row in entry %}
+      <tr>
+        <th>{{ row[0] }}</th>
+        {% for column in row[1] %}
+        <td>{{ column }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    {% endfor %}
+    </thead>
+  {% endif %}
+
+<!--
+Data: {{ table.data }}
+-->
+    <tbody>
+    {% for entry in table.data %}
+      {% for row in entry %}
+<!--
+Row: {{ row }}
+0: {{ row[0] }}
+1: {{ row[1] }}
+-->
+      <tr>
+        <th scope="row" class="text-start">{{ row[0] }}</th>
+        {% for column in row[1] %}
+<!--
+Column: {{ column }}
+-->
+        <td>{{ column }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    {% endfor %}
+    </tbody>
+
+  </table>
+</div>
+

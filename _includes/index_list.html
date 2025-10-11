@@ -1,0 +1,28 @@
+{% comment %}
+Usage:
+  Site Categories:
+    {% include index_list.html entries=site.categories id="categories" class="" item_class="" anchor_class="" %}
+  Site Tags:
+    {% include index_list.html entries=site.tags id="tags" class="" item_class="" anchor_class="" %}
+
+Parameters:
+    * entries         (Map <String, Object[]>) - the Map<K,V> entries to list; only uses (String) Key
+
+Optional Parameters:
+    * id            (string) :   ''   - an ID to assigned to the list
+    * class         (string) :   ''   - a CSS class assigned to the list
+    * item_class    (string) :   ''   - add custom class(es) for each list item; has support for '%level%' placeholder, which is the current heading level
+    * anchor_class  (string) :   ''   - add custom class(es) for each anchor element
+
+Output:
+    An unordered list representing the names of each entry. This snippet will
+    generate the name and hyperlink of each item in the list.
+{% endcomment %}
+
+<ul id="{{ include.id }}" class="{{ include.class }}">
+{% for entry in include.entries %}
+  <li class="{{ include.item_class }}">
+    <a class="{{ include.anchor_class }}" href="#{{ entry[0] }}">{{ entry[0] | capitalize }}</a>
+  </li>
+{% endfor %}
+</ul>

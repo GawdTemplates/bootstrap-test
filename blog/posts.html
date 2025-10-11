@@ -1,0 +1,16 @@
+---
+layout: blog
+title: Posts - Blog
+description: Blog Posts Archive
+sidebar:
+  right:
+    - categories
+    - tags
+    - authors
+posts:
+  limit: 25
+---
+
+<div id="blog-posts" class="col-md-8">
+{% include posts.html posts=site.blog %}
+</div><!-- /#blog-posts -->

@@ -1,0 +1,79 @@
+# Site settings
+#title: Bootstrap 5 Template
+author: CoolV1994
+#description: >
+#  Bootstrap 5.3.7 Template for GitHub Pages
+#baseurl: "/Template-Bootstrap-5"
+#url: "https://coolv1994.github.io"
+
+
+# Theme Settings
+# theme: light | dark | auto
+theme: dark
+# theme-color: HEX_COLOR
+theme-color: 712cf9
+# theme-rtl: true | false
+theme-rtl: false
+
+
+# Build Settings
+markdown: kramdown
+
+# Post Pagination
+paginate: 10
+paginate_path: "/page/:num/"
+
+# Include Paths when Rendering
+include:
+  - _pages
+  - _api
+  - _examples
+
+# Custom Posts Collections
+collections:
+  blog:
+    output: true
+    url: /blog/
+  authors:
+    output: true
+    url: /authors/
+  albums:
+    output: true
+    url: /albums/
+  docs:
+    output: true
+    url: /docs/
+
+
+# Default Values per Path
+defaults:
+  - scope:
+      path: "images"
+    values:
+      image: true
+      album: images
+  - scope:
+      path: "images/sample"
+    values:
+      image: true
+      album: sample
+  - scope:
+      path: "files"
+    values:
+      album: Files
+  - scope:
+      path: "docs"
+    values:
+      album: Documents
+  - scope:
+      path: "dashboard"
+    values:
+      dashboard: true
+  - scope:
+      path: "examples"
+    values:
+      album: Examples
+  - scope:
+      path: "examples/modules"
+    values:
+      album: Modules

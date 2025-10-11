@@ -1,0 +1,31 @@
+<header>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+
+<!-- Site Title / Logo -->
+{% assign brand = site.data.header.brand %}
+    <a class="navbar-brand" href="{% unless brand.url contains 'http' %}{{ site.baseurl }}{% endunless %}{{ brand.url }}">
+{% if brand.logo %}
+      <img src="{% unless brand.logo contains 'http' %}{{ site.baseurl }}{% endunless %}{{ brand.logo }}" alt="Logo" title="{{ brand.name }}" />
+{% else %}
+      {{ brand.name }}
+{% endif %}
+    </a>
+
+    <!-- Navbar Collapse Button -->
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+{% include navbar.html links=site.data.header.navbar %}
+
+  </div>
+</nav>
+
+{% comment %}
+{% include subnavbar.html %}
+{% endcomment %}
+
+</header>

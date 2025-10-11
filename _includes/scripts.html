@@ -1,0 +1,9 @@
+<!-- Bootstrap core JavaScript -->
+<script src="{{ site.baseurl }}/assets/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom scripts for this page -->
+{% if page.scripts %}
+{% for script in page.scripts %}
+<script src="{{ site.baseurl }}{{ script }}"></script>
+{% endfor %}
+{% endif %}

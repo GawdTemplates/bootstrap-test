@@ -1,0 +1,142 @@
+#
+# Sample Config
+#
+# ID:
+# - Template:
+#     Key: Value
+#
+
+# Default Sidebar Modules
+Default:
+- text:
+    title: About
+    content: >
+      This is a sample sidebar text module.
+- posts:
+    title: Featured Posts
+    show: list
+    collection: posts
+    category: Featured
+    limit: 5
+- navigation:
+    title: Social
+    data: Social
+
+
+# Post Modules
+Post:
+- meta:
+    title: Info
+- attachments:
+    title: Attachments
+    show: list
+- posts:
+    title: Related Posts
+    show: list
+    collection: related
+    limit: 5
+
+
+# Article Modules
+Article:
+- toc:
+    title: Table Of Contents
+- meta:
+    title: Info
+- posts:
+    title: Related Posts
+    show: list
+    collection: related
+    limit: 5
+
+
+# Blog Modules
+Blog:
+- posts:
+    title: Recent Posts
+    show: list
+    collection: posts
+    limit: 5
+- index:
+    title: Categories
+    show: categories
+    collection: posts
+- index:
+    title: Tags
+    show: tags
+    collection: posts
+
+
+Docs:
+- search:
+    title: Search
+    collection: docs
+- navigation:
+    title: Articles
+    collection: docs
+    sort: name
+- navigation:
+    title: Information
+    data: Docs_Info
+- index:
+    title: Categories
+    show: categories
+    collection: album
+- index:
+    title: Tags
+    show: tags
+    collection: album
+
+
+Projects:
+- text:
+    title: Note
+    content: >
+      This is a sample note.
+- navigation:
+    title: Projects
+    collection: projects
+    sort: name
+- posts:
+    title: Featured
+    show: preview
+    collection: projects
+    category: Featured
+    limit: 3
+
+
+Shop_Left:
+- text:
+    content: >
+      ![Logo](shop_logo.png)
+      ## Shop
+- search:
+    title: Search
+    collection: shop
+- navigation:
+    title: Categories
+    show: categories
+    collection: shop
+
+
+Shop_Right:
+- posts:
+    title: Featured Items
+    show: preview
+    collection: shop
+    categories: Featured
+    limit: 3
+- posts:
+    title: Special Offer
+    show: preview
+    collection: shop
+    categories: Sale
+    limit: 1
+- text:
+    title: Information
+    content: >
+      ### Open Hours:
+      Weekdays 9AM - 5PM
+      Weekends 10AM - 4PM
+      #### Phone
+      (555) 555-5555
